@@ -13,7 +13,7 @@ setup(
     long_description='see https://github.com/csachs/mfisp',
     author='Christian C. Sachs',
     author_email='sachs.christian@gmail.com',
-    install_requires=['molyso'],
+    install_requires=['molyso', 'mfisp-boxdetection'],
     url='https://github.com/csachs/mfisp',
     packages=find_packages(),
     license='BSD',
