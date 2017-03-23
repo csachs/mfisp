@@ -4,7 +4,7 @@ microfluidic image stack processing
 
 **NOTE: Pre-alpha tools, functionality subject to change without notice!**
 
-Some miscellaneous tools helpful for working with image stacks (with microfluidic structures). Currently contains two utilities:
+Some miscellaneous tools helpful for working with image stacks (with microfluidic structures). Currently contains the following utilities:
 
 ## Tools
 
