@@ -13,7 +13,7 @@ Some miscellaneous tools helpful for working with image stacks (with microfluidi
 Registration routine from [molyso](https://github.com/modsim/molyso), will automatically register the input stack and possible additional channels.
 
 ```bash
-> python3 -m mfisp.register --output result.tif --channel 0 input.tif
+> python -m mfisp.registration --output result.tif --channel 0 input.tif
 ```
 
 ### autorotate
@@ -23,7 +23,7 @@ Automatic rotation detection and de-rotation from [molyso](https://github.com/mo
 Windows users take a look [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv).)
 
 ```bash
-> python3 -m mfisp.autorotate --output result.tif --channel 0 input.tif
+> python -m mfisp.autorotate --output result.tif --channel 0 input.tif
 ```
 
 ### boxcrop
@@ -31,7 +31,7 @@ Windows users take a look [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#open
 Uses the register and autorotate functionality as described above, and [detects rectangular growth structures](https://github.com/csachs/mfisp-boxdetection) as region of interst (ROI). The resulting stack will contain only the ROI.
 
 ```bash
-> python3 -m mfisp.boxcrop --output result.tif --channel 0 input.tif
+> python -m mfisp.boxcrop --output result.tif --channel 0 input.tif
 ```
 
 ## License

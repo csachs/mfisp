@@ -1,24 +1,29 @@
 # -*- coding: utf-8 -*-
 """
-autorotate by Christian C. Sachs, uses molyso's autoration functionality ( https://github.com/modsim/molyso )
+autorotate by Christian C. Sachs, uses molyso's auto-rotation functionality ( https://github.com/modsim/molyso )
 https://dx.doi.org/10.1371/journal.pone.0163453
 """
 
 from molyso.imageio.imagestack import MultiImageStack
-from molyso.imageio.imagestack_czi import CziStack
-from molyso.imageio.imagestack_ometiff import OMETiffStack
+try:
+    from molyso.imageio.imagestack_ometiff import OMETiffStack
+    from molyso.imageio.imagestack_czi import CziStack
+    from molyso.imageio.imagestack_nd2 import ND2Stack
+except ImportError:
+    pass
+
 
 import argparse
 import numpy
 
-from molyso.imageio.tifffile import TiffWriter
+from tifffile import TiffWriter
 
 from molyso.generic.rotation import find_rotation, rotate_image
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="autorotation tool [using techniques of https://dx.doi.org/10.1371/journal.pone.0163453 ]"
+        description="auto-rotation tool [using techniques of https://dx.doi.org/10.1371/journal.pone.0163453 ]"
     )
 
     parser.add_argument("input", type=str, help="input file name")
